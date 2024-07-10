@@ -1,0 +1,9 @@
+server {
+   listen 80;
+   server_name 52.66.201.62;
+
+   root /srv/devops-build;
+   index index.html index.htm;
+
+   location / {
+       try_files $uri $uri/index.html;
