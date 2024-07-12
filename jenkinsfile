@@ -9,9 +9,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                
+
                 git branch: 'dev',
-                    credentialsId: 'github-pat new', 
+                    credentialsId: 'PAT',
                     url: 'https://github.com/Monishajoedevops/Capstone-project.git'
             }
         }
@@ -46,14 +46,6 @@ pipeline {
                     sh './deploy.sh'
                 }
             }
-        }
-    }
 
-    post {
-        always {
-            cleanWs()
-        }
-    }
-}
 
 
